@@ -5,7 +5,7 @@ import { scaleQuantile } from "d3-scale";
 import LinearGradient from "./LinearGradient";
 // import "./Map.css";
 
-const INDIA_TOPO_JSON = require("./india.topo.json");
+const INDIA_TOPO_JSON = require("../assets/jsons/india.topo.json");
 const PROJECTION_CONFIG = {
   scale: 350,
   center: [78.9629, 22.5937], // always in [East Latitude, North Longitude]

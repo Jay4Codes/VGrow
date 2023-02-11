@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import states from "./states.json";
-import districts from "./districts.json";
-import months from "./months.json";
+import states from "../assets/jsons/states.json";
+import districts from "../assets/jsons/districts.json";
+import months from "../assets/jsons/months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
 import "./CropPredict.css"
