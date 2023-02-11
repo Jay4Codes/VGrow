@@ -118,7 +118,7 @@ function Map() {
 
   return (
     <div className="full-width-height container">
-      <h1 className="no-margin center">States and UTs</h1>
+      <h1 className="no-margin center">Crop Distribution</h1>
       {/* <ReactTooltip>{tooltipContent}</ReactTooltip> */}
       <ComposableMap
         projectionConfig={PROJECTION_CONFIG}

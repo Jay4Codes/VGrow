@@ -1,5 +1,6 @@
 import React from "react";
 import about_left from "../assets/images/about-left-image.png";
+import "./About.css";
 
 const About = () => {
   return (
@@ -15,8 +16,8 @@ const About = () => {
             <div className="col-lg-6">
               <div className="section-heading">
                 <h2>
-                  Grow your website with our <em>SEO Tools</em> &amp;
-                  <span>Project</span> Management
+                  Grow your yield with our <em>Crop Prediction</em> &amp;
+                  <span> Trend </span>Analysis
                 </h2>
                 <p>
                   You can browse free HTML templates on Too CSS website. Visit
