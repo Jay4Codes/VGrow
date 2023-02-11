@@ -30,8 +30,11 @@
     margin: 0px 15px;
 }
 
-.our-prediction .item {
-    /* height: 200px; */
+
+.our-prediction .col-lg-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .our-prediction .item .thumb:hover .hover-effect {

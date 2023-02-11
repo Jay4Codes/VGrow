@@ -57,8 +57,8 @@ const About = () => {
                         <div className="icon">
                           <img src="assets/images/service-icon-03.png" alt="" />
                         </div>
-                        <div className="count-digit">120</div>
-                        <div className="count-title">Soils</div>
+                        <div className="count-digit">7</div>
+                        <div className="count-title">Fertilizers</div>
                         <p>Lorem ipsum dolor sitti amet, consectetur.</p>
                       </div>
                     </div>

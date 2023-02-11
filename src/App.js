@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import CropPredict from "./components/CropPredict";
+import FertPredict from "./components/FertPredict";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -24,6 +25,7 @@ function App() {
                 <Intro />
                 <About />
                 <CropPredict />
+                {/* <FertPredict /> */}
                 {/* <Stats /> */}
                 {/* <Map /> */}
                 <ContactUs />
