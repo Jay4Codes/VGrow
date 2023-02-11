@@ -1,6 +1,7 @@
 import "./App.css";
 import Map from "./components/Map";
 import Intro from "./components/Intro";
+import Stats from "./components/Stats";
 import About from "./components/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ function App() {
                 <Intro />
                 <About />
                 <CropPredict />
+                {/* <Stats /> */}
                 <Map />
                 <ContactUs />
               </>

@@ -4,7 +4,7 @@ import districts from "../assets/jsons/districts.json";
 import months from "../assets/jsons/months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
-import "./CropPredict.css"
+import "./CropPredict.css";
 
 const CropPredict = () => {
   const [data, setData] = useState("");
@@ -13,8 +13,8 @@ const CropPredict = () => {
   const [P_value, setP_value] = useState("");
   const [K_value, setK_value] = useState("");
   const [Ph_value, setPh_value] = useState("");
-  const [state_value, setstate_value] = useState("0");
-  const [district_value, setdistrict_value] = useState("0");
+  const [state_value, setstate_value] = useState("ANDAMAN And NICOBAR ISLANDS");
+  const [district_value, setdistrict_value] = useState("NICOBAR");
   const [start_month, setstart_month] = useState("1");
   const [end_month, setend_month] = useState("12");
 
@@ -45,7 +45,7 @@ const CropPredict = () => {
         setLoading(0);
       })
       .catch((error) => {
-        console.error("There was an error!", error);
+        console.error("Error!", error);
       });
   }
 
@@ -59,14 +59,18 @@ const CropPredict = () => {
           <div className="col-lg-6 offset-lg-3">
             <div className="section-heading">
               <h2>
-                Predict <em>Crops</em> &amp; for
-                <span> Smart Agriculture</span>
+                Predict <em>Crops</em> &amp; as per
+                <span> Your Needs </span>
               </h2>
-              <span>Our Recommendation</span>
+              <span>Our Recommendations</span>
             </div>
           </div>
         </div>
-        <form action="http://localhost:5000/crop" className="crop-form" method="POST">
+        <form
+          action="http://localhost:5000/crop"
+          className="crop-form"
+          method="POST"
+        >
           <div className="inputRow">
             <div className="inputDiv">
               <label htmlFor="nitrogen">Nitrogen value</label>
@@ -149,8 +153,8 @@ const CropPredict = () => {
                   setstate_value(f.target.value);
                 }}
               >
-                {states.map((e, i) => (
-                  <option value={i} key={i}>
+                {states?.map((e, i) => (
+                  <option value={e} key={i}>
                     {e}
                   </option>
                 ))}
@@ -163,8 +167,8 @@ const CropPredict = () => {
                   setdistrict_value(f.target.value);
                 }}
               >
-                {districts[state_value].map((e, i) => (
-                  <option value={i} key={i}>
+                {districts[states.indexOf(state_value)]?.map((e, i) => (
+                  <option value={e} key={i}>
                     {e}
                   </option>
                 ))}

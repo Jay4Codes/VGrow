@@ -43,22 +43,12 @@
 }
 
 .our-prediction .item .hover-effect {
-    position: absolute;
     background-image: url(../assets/images/hover-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     transition: all .5s;
-    bottom: -240px;
-    right: 30px;
     width: 239px;
     height: 210px;
-}
-
-.our-prediction .item .hover-effect .inner-content {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    text-align: right;
 }
 
 .our-prediction .item .hover-effect .inner-content h4 {

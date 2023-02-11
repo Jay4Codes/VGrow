@@ -12,16 +12,12 @@
 }
 
 .about-us .section-heading p {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .about-us .fact-item .icon {
     width: 45px;
     height: 45px;
-}
-
-.about-us .fact-item {
-    margin-top: 45px;
 }
 
 .about-us .fact-item .count-digit {

@@ -10,11 +10,15 @@ const Intro = () => {
             <div className="row">
               <div className="col-lg-6 align-self-center">
                 <div className="item header-text">
-                  <h6>Welcome</h6>
+                  <h6>Welcome to VGrow</h6>
                   <h2>
-                    Not sure what <em>Crop</em> to <span>plant</span>?
+                    Providing <em>Smart</em> Farming <span>Solutions</span>?
                   </h2>
-                  <p>We suggest smart agriculture using Machine Learning</p>
+                  <p>
+                    We suggest Optimal crop and fertilizer selection based on
+                    the local conditions and resources crucial for sustainable
+                    and profitable agriculture
+                  </p>
                   <div className="down-buttons">
                     <div className="main-blue-button-hover">
                       <a href="#crop">Predict Your Crop</a>

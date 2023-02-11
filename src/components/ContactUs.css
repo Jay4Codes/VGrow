@@ -1,10 +1,9 @@
 .contact-dec img {
     position: absolute;
     z-index: 1;
-    /* width: 459px; */
-    height: 702px;
+    height: 400px;
     right: 0;
-    bottom: -400px;
+    bottom: -120px;
 }
 
 .contact-left-dec img {
