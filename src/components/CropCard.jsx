@@ -1,17 +1,12 @@
 import React from "react";
+import "./CropCard.css";
 
 const CropCard = (props) => {
   return (
-    <div className="item">
-      <div className="thumb">
-        <img src={props.img} alt="" />
-        <div className="hover-effect">
-          <div className="inner-content">
-            <h4>{props.name}</h4>
-            <span>{props.price}</span>
-          </div>
-        </div>
-      </div>
+    <div className="my-crops" data-aos="zoom-in-up" data-aos-duration="1500">
+      <img src={"./crops/" + props.name + ".png"} alt="" />
+      <h4 className="web">{props.name}</h4>
+      <p className="crops-info">{props.price}</p>
     </div>
   );
 };

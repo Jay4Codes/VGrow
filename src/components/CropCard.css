@@ -1,0 +1,190 @@
+.crops-container {
+    color: var(--text-color);
+    max-width: 100%;
+    z-index: 22;
+    padding: 70px 60px;
+    background-color: #ff695f;
+}
+
+.crops-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.my-crops {
+    background: #ffe8e6;
+    margin: 20px;
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    height: max-content;
+    overflow: hidden;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    box-shadow: 0px 30px 60px 0px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+    border: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.my-crops:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 30px 60px 0px rgb(0 0 0 / 20%);
+    transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+}
+
+.my-crops .web {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.my-crops img {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.my-crops:hover .web {
+    color: #d62000;
+}
+
+.my-crops span {
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.crops-info {
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.crops-title {
+    margin-bottom: 60px;
+}
+
+.crops-title h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 600;
+}
+
+.crops-title h3 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.my-crops .web {
+    color: #812000;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media only screen and (min-width: 1738px) {
+    .crops-container {
+        padding: 100px 100px;
+    }
+
+    .crops-title h2 {
+        font-size: 2rem;
+    }
+
+    .my-crops {
+        width: 500px;
+        padding: 40px 20px;
+        margin-bottom: 20px;
+        height: 400px;
+    }
+
+    .my-crops .web {
+        margin: 10px 0;
+        font-size: 2.4rem;
+    }
+
+    .crops-title h3 {
+        font-size: 4rem;
+        width: 500px;
+    }
+
+    .my-crops img {
+        margin: 10px 0;
+        width: 80px;
+    }
+
+    .crops-info {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .my-crops {
+        width: 200px;
+        padding: 10px 10px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .crops-title {
+        text-align: center;
+    }
+
+    .crops-title h3 {
+        font-size: 2rem;
+    }
+
+    .crops-row {
+        justify-content: space-around;
+    }
+
+    .my-crops {
+        margin-bottom: 20px;
+        width: 250px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .my-crops {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .crops-container {
+        padding: 30px 20px;
+    }
+}
+
+/* light theme */
+.light .my-crops {
+    box-shadow: 0px 30px 60px 0px rgb(0 0 0 / 10%);
+}
+
+.light .my-crops:hover {
+    box-shadow: var(--card-box-shadow);
+}
+
+.light .my-crops .web {
+    color: black;
+}
+
+.light .my-crops:hover .web {
+    color: var(--heading-text);
+}
+
+.light .crops-title h3 {
+    color: rgb(28, 28, 28);
+}

@@ -5,6 +5,7 @@ import months from "../assets/jsons/months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
 import "./CropPredict.css";
+import Map from "./Map";
 
 const CropPredict = () => {
   const [data, setData] = useState("");
@@ -184,7 +185,9 @@ const CropPredict = () => {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-lg-12">
-                  <CropCard name={data} price="" img="" />
+                  {Object.entries(data).map(([key, value]) => (
+                    <CropCard name={value} price="222222" key={key} />
+                  ))}
                 </div>
               </div>
             </div>
@@ -192,6 +195,7 @@ const CropPredict = () => {
             <span>No Results</span>
           )}
         </form>
+        <Map />
       </div>
     </div>
   );

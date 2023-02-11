@@ -25,7 +25,7 @@ function App() {
                 <About />
                 <CropPredict />
                 {/* <Stats /> */}
-                <Map />
+                {/* <Map /> */}
                 <ContactUs />
               </>
             }

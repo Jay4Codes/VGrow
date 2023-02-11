@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
-// import ReactTooltip from "react-tooltip";
 import LinearGradient from "./LinearGradient";
 // import "./Map.css";
 
@@ -119,7 +118,6 @@ function Map() {
   return (
     <div className="full-width-height container">
       <h1 className="no-margin center">Crop Distribution</h1>
-      {/* <ReactTooltip>{tooltipContent}</ReactTooltip> */}
       <ComposableMap
         projectionConfig={PROJECTION_CONFIG}
         projection="geoMercator"
