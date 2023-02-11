@@ -79,12 +79,9 @@ def members1():
 
     scaler = joblib.load("./all_scaler.gz")
     x_scaled = scaler.transform(data)
-    my_prediction = crop_recommendation_model.predict(x_scaled)
     probs = crop_recommendation_model.predict_proba(x_scaled)[0]
     top_3 = sorted(range(len(probs)), key=lambda i: probs[i])[-3:]
     print(top_3)
-    # for i in top_3:
-    #     print(decode_crop(dict_crop, i))
 
     final_prediction = []
 
@@ -116,7 +113,6 @@ def members1():
             if value == top:
                 final_prediction.append(key)
 
-    print(final_prediction)
     return jsonify({"crop": final_prediction, "data": y.json()['main'], 'l': l})
 
 
