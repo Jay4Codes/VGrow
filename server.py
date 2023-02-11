@@ -12,11 +12,12 @@ warnings.filterwarnings('ignore')
 app = Flask(__name__)
 CORS(app)
 
-crop_recommendation_model_path = './random_forest_model.pkl'
+# crop_recommendation_model_path = './XGB_Crop.pkl'
+crop_recommendation_model_path = './RandomForest_Crop.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
-fertilizer_recommendation_model_path = './xgb_pipeline.pkl'
+fertilizer_recommendation_model_path = './XGB_Fertilizer.pkl'
 fertilizer_recommendation_model = pickle.load(
     open(fertilizer_recommendation_model_path, 'rb'))
 
@@ -76,7 +77,7 @@ def members1():
     data = np.array([N, P, K, temprature, humidity,
                     ph, avg_rainfall]).reshape(1, -1)
 
-    scaler = joblib.load("./scalers/all_scaler.gz")
+    scaler = joblib.load("./all_scaler.gz")
     x_scaled = scaler.transform(data)
     my_prediction = crop_recommendation_model.predict(x_scaled)
     dict_crop = {'rice': 20,
