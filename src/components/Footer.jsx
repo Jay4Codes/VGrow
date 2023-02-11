@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="copyright">
-                <p>Designed & Developed by Team Enemies Of Syntax</p>
+                <p>Designed & Developed by Team Enemies Of Syntax with 💙</p>
               </div>
             </div>
           </div>

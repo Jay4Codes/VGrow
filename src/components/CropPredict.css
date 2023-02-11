@@ -1,0 +1,79 @@
+.our-prediction .prediction-left-dec img {
+    width: 342px;
+    height: 311px;
+    left: 45px;
+    top: 120px;
+    position: absolute;
+    z-index: 1;
+}
+
+.our-prediction {
+    padding-top: 120px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.our-prediction .section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-prediction .section-heading h2 {
+    text-align: center;
+    margin: 0px 60px 0px 60px;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 1;
+}
+
+.our-prediction {
+    margin: 0px 15px;
+}
+
+.our-prediction .item .thumb {
+    position: relative;
+}
+
+.our-prediction .item .thumb:hover .hover-effect {
+    bottom: 30px;
+}
+
+.our-prediction .item .thumb:hover img {
+    opacity: 0.7;
+}
+
+.our-prediction .item .hover-effect {
+    position: absolute;
+    background-image: url(../assets/images/hover-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s;
+    bottom: -240px;
+    right: 30px;
+    width: 239px;
+    height: 210px;
+}
+
+.our-prediction .item .hover-effect .inner-content {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    text-align: right;
+}
+
+.our-prediction .item .hover-effect .inner-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.our-prediction .item .hover-effect .inner-content span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.our-prediction .item .thumb img {
+    border-radius: 20px;
+    transition: all .3s;
+}

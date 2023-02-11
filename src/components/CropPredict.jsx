@@ -4,6 +4,7 @@ import districts from "./districts.json";
 import months from "./months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
+import "./CropPredict.css"
 
 const CropPredict = () => {
   const [data, setData] = useState("");
@@ -49,8 +50,8 @@ const CropPredict = () => {
   }
 
   return (
-    <div id="portfolio" className="our-portfolio section">
-      <div className="portfolio-left-dec">
+    <div id="crop" className="our-prediction section">
+      <div className="prediction-left-dec">
         <img src={crop_left} alt="" />
       </div>
       <div className="container">
@@ -58,15 +59,14 @@ const CropPredict = () => {
           <div className="col-lg-6 offset-lg-3">
             <div className="section-heading">
               <h2>
-                Our Recent <em>Projects</em> &amp; Case Studies
-                <span>for Clients</span>
+                Predict <em>Crops</em> &amp; for
+                <span> Smart Agriculture</span>
               </h2>
-              <span>Our Portfolio</span>
+              <span>Our Recommendation</span>
             </div>
           </div>
         </div>
         <form action="http://localhost:5000/crop" method="POST">
-          <h3>Soil Data</h3>
           <div className="inputRow">
             <div className="inputDiv">
               <label htmlFor="nitrogen">Nitrogen value</label>
@@ -177,11 +177,10 @@ const CropPredict = () => {
           {Loading == 1 ? (
             <div className="resultDiv">Loading....</div>
           ) : data !== "" ? (
-            // <div className="resultDiv">Recommeded Crop: {data}</div>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-lg-12">
-                  <CropCard name={data} price="" />
+                  <CropCard name={data} price="" img="" />
                 </div>
               </div>
             </div>

@@ -24,16 +24,10 @@ const Header = () => {
                     </a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#services">Features</a>
-                  </li>
-                  <li className="scroll-to-section">
                     <a href="#about">About</a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#portfolio">Crop Prediction</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="#video">Demo</a>
+                    <a href="#crop">Crop Prediction</a>
                   </li>
                   <li className="scroll-to-section">
                     <div className="main-red-button-hover">

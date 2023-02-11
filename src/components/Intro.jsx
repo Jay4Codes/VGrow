@@ -17,7 +17,7 @@ const Intro = () => {
                   <p>We suggest smart agriculture using Machine Learning</p>
                   <div className="down-buttons">
                     <div className="main-blue-button-hover">
-                      <a href="#contact">Predict Your Crop</a>
+                      <a href="#crop">Predict Your Crop</a>
                     </div>
                   </div>
                 </div>
