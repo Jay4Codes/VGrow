@@ -11,6 +11,11 @@
     margin-right: 60px;
 }
 
+.about-us .left-image img {
+    width: 100%;
+    height: auto;
+}
+
 .about-us .section-heading p {
     margin-top: 40px;
 }

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import states from "../assets/jsons/states.json";
 import districts from "../assets/jsons/districts.json";
-import months from "../assets/jsons/months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
 import "./CropPredict.css";
@@ -18,8 +17,6 @@ const CropPredict = () => {
   const [crop_type, setcrop_type] = useState("");
   const [state_value, setstate_value] = useState("ANDAMAN And NICOBAR ISLANDS");
   const [district_value, setdistrict_value] = useState("NICOBAR");
-  const [start_month, setstart_month] = useState("1");
-  const [end_month, setend_month] = useState("12");
 
   function getData() {
     setLoading(1);
@@ -37,8 +34,6 @@ const CropPredict = () => {
         moisture: moisture,
         soil_type: soil_type,
         crop_type: crop_type,
-        start_month: start_month,
-        end_month: end_month,
       }),
     };
 
@@ -55,7 +50,7 @@ const CropPredict = () => {
   }
 
   return (
-    <div id="crop" className="our-prediction section">
+    <div id="fert" className="our-prediction section">
       <div className="prediction-left-dec">
         <img src={crop_left} alt="" />
       </div>
@@ -144,36 +139,6 @@ const CropPredict = () => {
           </div>
           <div className="inputRow">
             <div className="inputDiv">
-              <label htmlFor="state">Start month</label>
-              <select
-                onChange={(f) => {
-                  setstart_month(f.target.value);
-                }}
-              >
-                {months.map((e, i) => (
-                  <option value={i} key={i}>
-                    {e}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="inputDiv">
-              <label htmlFor="district">End month</label>
-              <select
-                onChange={(f) => {
-                  setend_month(f.target.value);
-                }}
-              >
-                {months.map((e, i) => (
-                  <option value={i} key={i}>
-                    {e}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="inputRow">
-            <div className="inputDiv">
               <label htmlFor="state">State</label>
               <select
                 onChange={(f) => {
@@ -219,7 +184,6 @@ const CropPredict = () => {
             <span>No Results</span>
           )}
         </form>
-        <Map />
       </div>
     </div>
   );

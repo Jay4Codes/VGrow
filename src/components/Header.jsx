@@ -27,7 +27,13 @@ const Header = () => {
                     <a href="#about">About</a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#crop">Crop Prediction</a>
+                    <a href="#crop">Crop Analysis</a>
+                  </li>
+                  <li className="scroll-to-section">
+                    <a href="#fert">Fertilizer Choice</a>
+                  </li>
+                  <li>
+                    <div id="google_translate_element"></div>
                   </li>
                   <li className="scroll-to-section">
                     <div className="main-red-button-hover">

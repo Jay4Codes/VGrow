@@ -101,11 +101,6 @@ p {
     color: #2a2a2a;
 }
 
-img {
-    width: 100%;
-    overflow: hidden;
-}
-
 ::selection {
     background: #03a4ed;
     color: #fff;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import states from "../assets/jsons/states.json";
 import districts from "../assets/jsons/districts.json";
 import months from "../assets/jsons/months.json";
@@ -10,17 +10,34 @@ import Map from "./Map";
 const CropPredict = () => {
   const [data, setData] = useState("");
   const [Loading, setLoading] = useState(-1);
-  const [N_value, setN_value] = useState("");
-  const [P_value, setP_value] = useState("");
-  const [K_value, setK_value] = useState("");
-  const [Ph_value, setPh_value] = useState("");
+  const [N_value, setN_value] = useState("40");
+  const [P_value, setP_value] = useState("40");
+  const [K_value, setK_value] = useState("40");
+  const [Ph_value, setPh_value] = useState("7");
   const [state_value, setstate_value] = useState("ANDAMAN And NICOBAR ISLANDS");
   const [district_value, setdistrict_value] = useState("NICOBAR");
   const [start_month, setstart_month] = useState("1");
   const [end_month, setend_month] = useState("12");
 
+  const [season, setseason] = useState("");
+
   function getData() {
     setLoading(1);
+
+    if (season === "Kharif") {
+      setstart_month("4");
+      setend_month("9");
+    } else if (season === "Rabi") {
+      setstart_month("10");
+      setend_month("3");
+    } else if (season === "Zaid") {
+      setstart_month("1");
+      setend_month("3");
+    } else if (season === "Whole Year") {
+      setstart_month("1");
+      setend_month("12");
+    }
+
     var requestOptions = {
       // mode:'no-cors',
       dataType: "json",
@@ -93,8 +110,6 @@ const CropPredict = () => {
                 onInput={(e) => setP_value(e.target.value)}
               />
             </div>
-          </div>
-          <div className="inputRow">
             <div className="inputDiv">
               <label htmlFor="potassium">Potassium value</label>
               <input
@@ -105,18 +120,21 @@ const CropPredict = () => {
                 onInput={(e) => setK_value(e.target.value)}
               />
             </div>
-            <div className="inputDiv">
-              <label htmlFor="ph">Ph value</label>
-              <input
-                name="ph"
-                type="text"
-                placeholder="Enter value"
-                value={Ph_value}
-                onInput={(e) => setPh_value(e.target.value)}
-              />
-            </div>
           </div>
           <div className="inputRow">
+            <div className="inputDiv">
+              <label htmlFor="state">Season</label>
+              <select
+                onChange={(f) => {
+                  setseason(f.target.value);
+                }}
+              >
+                <option value="Kharif">Kharif (June-October)</option>
+                <option value="Rabi">Rabi (November-April)</option>
+                <option value="Zaid">Zaid (March-June)</option>
+                <option value="Whole Year">Whole Year</option>
+              </select>
+            </div>
             <div className="inputDiv">
               <label htmlFor="state">Start month</label>
               <select
@@ -147,6 +165,16 @@ const CropPredict = () => {
             </div>
           </div>
           <div className="inputRow">
+            <div className="inputDiv">
+              <label htmlFor="ph">Ph value</label>
+              <input
+                name="ph"
+                type="text"
+                placeholder="Enter value"
+                value={Ph_value}
+                onInput={(e) => setPh_value(e.target.value)}
+              />
+            </div>
             <div className="inputDiv">
               <label htmlFor="state">State</label>
               <select

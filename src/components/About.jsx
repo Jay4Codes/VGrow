@@ -35,7 +35,7 @@ const About = () => {
                         </div>
                         <div className="count-digit">22</div>
                         <div className="count-title">Crops</div>
-                        <p>Lorem ipsum dolor sitti amet, consectetur.</p>
+                        <p>to choose from and begin maximum yield</p>
                       </div>
                     </div>
                   </div>
@@ -47,7 +47,10 @@ const About = () => {
                         </div>
                         <div className="count-digit">28</div>
                         <div className="count-title">States</div>
-                        <p>Lorem ipsum dolor sitti amet, consectetur.</p>
+                        <p>
+                          fine tuned models to provide best results all over
+                          India.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -59,7 +62,9 @@ const About = () => {
                         </div>
                         <div className="count-digit">7</div>
                         <div className="count-title">Fertilizers</div>
-                        <p>Lorem ipsum dolor sitti amet, consectetur.</p>
+                        <p>
+                          Budget friendly and reliable fertilizers to pick from
+                        </p>
                       </div>
                     </div>
                   </div>
