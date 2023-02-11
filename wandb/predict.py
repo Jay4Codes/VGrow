@@ -25,6 +25,8 @@ dict_crop = {'rice': 20,
              'jute': 8,
              'coffee': 5}
 
+x_columns = ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'label'] # for reference only
+
 def standardize(x, type):
     scaler = joblib.load(f"../scalers/{type}_scaler.gz")
     x_scaled = scaler.transform(x)
