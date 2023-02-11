@@ -4,7 +4,7 @@
     left: 45px;
     top: 120px;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
 }
 
 .our-prediction {
@@ -76,4 +76,64 @@
 .our-prediction .item .thumb img {
     border-radius: 20px;
     transition: all .3s;
+}
+
+.crop-form .inputDiv {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+.crop-form .inputDiv label {
+    font-size: small;
+    color: #6f7482;
+}
+
+.crop-form .inputDiv input {
+    padding: 10px;
+    border: none;
+    background-color: #f8fafc;
+}
+
+.crop-form .inputDiv input:focus {
+    outline: none;
+}
+
+.crop-form .inputDiv input::placeholder {
+    color: #b8bcca;
+}
+
+.crop-form .inputDiv select {
+    padding: 10px;
+    border: none;
+    background-color: #f8fafc;
+}
+
+.crop-form .inputRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.crop-form button {
+    color: white;
+    background-color: #0a142f;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 10px 10px 91px -10px rgba(113, 150, 216, 0.75);
+    -webkit-box-shadow: 10px 10px 91px -10px rgba(113, 150, 216, 0.75);
+    -moz-box-shadow: 10px 10px 91px -10px rgba(113, 150, 216, 0.75);
+}
+
+.crop-form .resultDiv {
+    background-color: #d6e5f4;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    font-weight: bold;
 }

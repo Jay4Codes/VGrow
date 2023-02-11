@@ -66,7 +66,7 @@ const CropPredict = () => {
             </div>
           </div>
         </div>
-        <form action="http://localhost:5000/crop" method="POST">
+        <form action="http://localhost:5000/crop" className="crop-form" method="POST">
           <div className="inputRow">
             <div className="inputDiv">
               <label htmlFor="nitrogen">Nitrogen value</label>
