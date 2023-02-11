@@ -1,0 +1,35 @@
+.contact-dec img {
+    position: absolute;
+    z-index: 1;
+    width: 459px;
+    height: 702px;
+    right: 0;
+    bottom: -400px;
+}
+
+.contact-left-dec img {
+    position: absolute;
+    z-index: 1;
+    width: 174px;
+    height: 319px;
+    left: 0;
+    top: 120px;
+}
+
+.contact-us {
+    z-index: 2;
+    position: relative;
+    padding-top: 120px;
+    margin-top: 0px;
+}
+
+.contact-us .section-heading h2 {
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+
+.contact-us #map iframe {
+    border-radius: 23px;
+    position: relative;
+    z-index: 2;
+}

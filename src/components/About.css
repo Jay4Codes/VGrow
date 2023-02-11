@@ -1,0 +1,43 @@
+.about-us {
+    margin-top: 0px;
+    padding-top: 120px;
+}
+
+.about-us .left-image {
+    margin-right: 30px;
+}
+
+.about-us .section-heading h2 {
+    margin-right: 60px;
+}
+
+.about-us .section-heading p {
+    margin-top: 50px;
+}
+
+.about-us .fact-item .icon {
+    width: 45px;
+    height: 45px;
+}
+
+.about-us .fact-item {
+    margin-top: 45px;
+}
+
+.about-us .fact-item .count-digit {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-top: 5px;
+}
+
+.about-us .fact-item .count-title {
+    font-size: 15px;
+    color: #ff695f;
+}
+
+.about-us .fact-item p {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
