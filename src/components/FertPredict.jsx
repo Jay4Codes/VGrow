@@ -9,12 +9,12 @@ import Map from "./Map";
 const CropPredict = () => {
   const [data, setData] = useState("");
   const [Loading, setLoading] = useState(-1);
-  const [N_value, setN_value] = useState("");
-  const [P_value, setP_value] = useState("");
-  const [K_value, setK_value] = useState("");
-  const [moisture, setmoisture] = useState("");
-  const [soil_type, setsoil_type] = useState("");
-  const [crop_type, setcrop_type] = useState("");
+  const [N_value, setN_value] = useState("40");
+  const [P_value, setP_value] = useState("40");
+  const [K_value, setK_value] = useState("40");
+  const [moisture, setmoisture] = useState("38");
+  const [soil_type, setsoil_type] = useState("4");
+  const [crop_type, setcrop_type] = useState("3");
   const [state_value, setstate_value] = useState("ANDAMAN And NICOBAR ISLANDS");
   const [district_value, setdistrict_value] = useState("NICOBAR");
 
@@ -176,7 +176,7 @@ const CropPredict = () => {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-lg-12">
-                  <CropCard name={data} price="222222" />
+                  <CropCard name={data} item="1" />
                 </div>
               </div>
             </div>

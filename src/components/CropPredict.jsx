@@ -5,7 +5,6 @@ import months from "../assets/jsons/months.json";
 import CropCard from "./CropCard";
 import crop_left from "../assets/images/crop-left-dec.png";
 import "./CropPredict.css";
-import Map from "./Map";
 
 const CropPredict = () => {
   const [data, setData] = useState("");
@@ -136,36 +135,6 @@ const CropPredict = () => {
               </select>
             </div>
             <div className="inputDiv">
-              <label htmlFor="state">Start month</label>
-              <select
-                onChange={(f) => {
-                  setstart_month(f.target.value);
-                }}
-              >
-                {months.map((e, i) => (
-                  <option value={i} key={i}>
-                    {e}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="inputDiv">
-              <label htmlFor="district">End month</label>
-              <select
-                onChange={(f) => {
-                  setend_month(f.target.value);
-                }}
-              >
-                {months.map((e, i) => (
-                  <option value={i} key={i}>
-                    {e}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="inputRow">
-            <div className="inputDiv">
               <label htmlFor="ph">Ph value</label>
               <input
                 name="ph"
@@ -175,6 +144,8 @@ const CropPredict = () => {
                 onInput={(e) => setPh_value(e.target.value)}
               />
             </div>
+          </div>
+          <div className="inputRow">
             <div className="inputDiv">
               <label htmlFor="state">State</label>
               <select
@@ -214,7 +185,7 @@ const CropPredict = () => {
               <div className="row">
                 <div className="col-lg-12">
                   {Object.entries(data).map(([key, value]) => (
-                    <CropCard name={value} price="222222" key={key} />
+                    <CropCard name={value} item="0" key={key} />
                   ))}
                 </div>
               </div>
@@ -223,7 +194,6 @@ const CropPredict = () => {
             <span>No Results</span>
           )}
         </form>
-        <Map />
       </div>
     </div>
   );

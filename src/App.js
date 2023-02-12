@@ -1,7 +1,6 @@
 import "./App.css";
 import Map from "./components/Map";
 import Intro from "./components/Intro";
-import Stats from "./components/Stats";
 import About from "./components/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-
         <Routes>
           <Route
             path="/"
@@ -26,8 +24,7 @@ function App() {
                 <About />
                 <CropPredict />
                 <FertPredict />
-                {/* <Stats /> */}
-                {/* <Map /> */}
+                <Map />
                 <ContactUs />
               </>
             }
