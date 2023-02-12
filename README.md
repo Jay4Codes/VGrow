@@ -41,3 +41,6 @@ Now we are taking this time to introduce you guys with the web thing of our comp
 # Description of VGrow
 
 The user will only have to enter a few fields that include their location, soil profile and time period to receive a list of recommendations of which crops can be viably grown in that region, within the specified amount of time. There will also be an option to predict the optimal fertiliser to be used, given the above data, in addition to the crop being grown. The website offers a simple and easily navigable user interface that makes these predictive algorithms more accessible. In addition, the user will be able to switch between languages based on their preferences, so as to ensure that language is no barrier to access this information.
+
+<img src="https://i.imgur.com/NMEZTQp.jpg" />
+<img src="https://i.imgur.com/zophvZb.jpg" />
