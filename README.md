@@ -44,3 +44,18 @@ The user will only have to enter a few fields that include their location, soil 
 
 <img src="https://i.imgur.com/NMEZTQp.jpg" />
 <img src="https://i.imgur.com/zophvZb.jpg" />
+
+# Model Optimization
+## Logistic Regression
+* We started by training a baseline Logistic Regression model on the dataset. For this model, we got a train accuracy of **93%** and a testing accuracy of **92%**. This showed that the model was generalizing well in a linear scenario and a more complex model would overfit to the training data and give poor result on the test set.
+
+## Simple Decision Tree
+* Next, we trained a simple Decision Tree on the dataset and let it train completely to achieve a train accuracy of **100%**. This gave us a test accuracy of **95%**. Even though this is higher than the test accuracy of our baseline model, we can see that it lags significnatly behind the training accuracy of 100%. This shows that the model is overfitting and a Simple Decision Tree is not the best choice for this dataset.
+
+## Random Forest
+* Finally, we used a Random Forest model with the default hyperparameters and let it create 100 individual estimators Decision Trees. This led to a train accuracy of **100%** and a testing accuracy of **97%**. This was even better than the individual Decision Tree as it increased the testing accuracy. 
+* At this point, we felt the model could still perform better on unseen data as having a training accuracy of 100% is generally not suitable.
+* So, we tuned our Random Forest model hyperparameters to include **log<sub>2</sub> n + 1** trees which serves as a good starting point for estimating the number of individual trees while optimizing a Random Forest model. We modified the max_tree_depth to 7 nodes so that no single tree overfits on the training set resulting in a 100% training accuracy. 
+* The new parameters resulted in a slightly lower training accuracy of **99.75%** but a much better testing accuracy of **99.3%**. 
+
+* We had now tuned our model to achieve the best predictions for the given dataset. So we loaded it into a pkl file and used it in the Flask app for further predictions.
